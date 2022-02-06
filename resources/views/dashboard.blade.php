@@ -35,9 +35,11 @@
                             @endif
                         </div>
                         <div class="d-flex align-items-center">
+                            <form action="/todos/{{ $todo->id }}/edit" method="post" class="ms-2">
                             <a href="/todos/{{ $todo->id }}/edit" class="text-light">
                                 <i class="bi bi-pencil fs-4"></i>
                             </a>
+                        </form>
                             @if (!$todo->is_complete)
                                 <a href="/todos/{{ $todo->id }}/complete" class="text-light ms-2">
                                     <i class="bi bi-check2-square fs-4"></i>
